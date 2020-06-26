@@ -14,20 +14,23 @@ public class HelloWorld {
 		int firstNum = x.nextInt();
 		System.out.println("Choose a second number:");
 		int secondNum = x.nextInt();
+		System.out.print("Would you like to add, multiply divide?");
+		String operator = x.nextLine();
+		System.out.println("You would like to: "+ operator);
 		result = firstNum + secondNum;
-//		if (operator.equalsIgnoreCase("add")) {
-//			result = firstNum + secondNum;
-//		}
-//		else if (operator.equalsIgnoreCase("multiply")) {
-//			result = firstNum + secondNum;
-//		}
-//		else if (operator.equalsIgnoreCase("devide")) {
-//			result = firstNum + secondNum;
-//		}
+		if (operator.equalsIgnoreCase("add")) {
+			result = firstNum + secondNum;
+		}
+		else if (operator.equalsIgnoreCase("multiply")) {
+			result = firstNum + secondNum;
+		}
+		else if (operator.equalsIgnoreCase("divide")) {
+			result = firstNum + secondNum;
+		}
 //		else {
 //			System.out.println("Unknown input");
 //		}
-		
+//		
 		return result;
 	}
 	public static void main(String[] args) {
