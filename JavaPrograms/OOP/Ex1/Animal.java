@@ -3,13 +3,13 @@ package Ex1;
 // Class name is animal and has 3 private attributes
 public class Animal {
 	private String name = ("defult");
-	private String type = ("defult");
 	private String colour = ("defult");
+	private int numLegs;
+	protected String foodchain = ("defult");
 	
 	// contrustor used to create new objects of type animal
 	public Animal (String name, String type, String colour){
 		this.name = name;
-		this.type = type;
 		this.colour = colour;
 	}
 	
@@ -22,8 +22,8 @@ public class Animal {
 		return this.name;
 	}
 	
-	public String getType() {
-		return this.type;
+	public int getnumLegs() {
+		return this.numLegs;
 	}
 	
 	public String getColour() {
@@ -35,13 +35,30 @@ public class Animal {
 		return;
 	}
 	
-	public void setType(String type) {
-		this.type = type;
+	public void setnumLegs(int numLegs) {
+		this.numLegs = numLegs;
 		return;
 	}
 	
 	public void setColour(String colour) {
 		this.colour = colour;
 		return;
+	}
+	
+	
+	public int getNumLegs() {
+		return numLegs;
+	}
+
+	public String getFoodchain() {
+		return foodchain;
+	}
+
+	public void setFoodchain(String foodchain) {
+		this.foodchain = foodchain;
+	}
+
+	public String sound() {
+		return ("Sound");
 	}
 }
