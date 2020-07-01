@@ -27,7 +27,7 @@ public class Runner {
 		
 		Garage.calculateBill();
 		
-		//Garage.removeByMake("Lambo");
+		Garage.removeByMake("Lambo");
 		Garage.getAll();
 		
 		Garage.empty();
