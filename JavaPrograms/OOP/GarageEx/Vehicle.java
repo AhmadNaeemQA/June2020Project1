@@ -1,5 +1,6 @@
 package GarageEx;
 
+
 public abstract class Vehicle {
 	protected String make;
 	protected String model;
@@ -15,6 +16,7 @@ public abstract class Vehicle {
 	}
 	
 	public Vehicle() {
+		Garage.add(this);
 		
 	}
 

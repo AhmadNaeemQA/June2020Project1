@@ -6,7 +6,7 @@ public class Car extends Vehicle {
 	private String type;
 	
 	public Car() {
-		
+
 	}
 
 	public String getType() {

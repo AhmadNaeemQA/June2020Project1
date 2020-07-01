@@ -5,7 +5,7 @@ public class Motorcycle extends Vehicle {
 	private int acceleration;
 	
 	public Motorcycle() {
-		
+	
 	}
 
 	public int getAcceleration() {

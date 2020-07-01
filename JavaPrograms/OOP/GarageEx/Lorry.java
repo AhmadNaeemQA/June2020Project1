@@ -5,7 +5,7 @@ public class Lorry extends Vehicle {
 	private int maxLoad;
 	
 	public Lorry(){
-		
+
 	}
 
 	public int getMaxLoad() {
