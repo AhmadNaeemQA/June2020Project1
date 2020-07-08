@@ -37,8 +37,8 @@ public class LearningJDBC {
 			stmt = conn.createStatement();
 
 			String sql;
-			int input = 1;
-			sql = "SELECT * FROM user WHERE id =" + input + "";
+
+			sql = "SELECT * FROM user";
 			ResultSet rs = stmt.executeQuery(sql);
 
 			// STEP 5: Extract data from result set
@@ -52,10 +52,33 @@ public class LearningJDBC {
 				System.out.print("ID: " + id);
 				System.out.print(" -- Name: " + first);
 				System.out.println(" -- Email: " + email);
+
 			}
 
 			// SIDE STEP: Adding data to table
 
+//			stmt.executeUpdate("INSERT INTO user (name, email) VALUES ('Simpson1', 'Springfield@hotmail.com')");
+//			stmt.executeUpdate("INSERT INTO user (name, email) VALUES ('Simpson2', 'Springfield@hotmail.com')");
+			// SIDE STEP: DELETING data from table
+
+			stmt.executeUpdate("UPDATE user SET email = 'ahmadnew@hotmail.com' WHERE name = 'Ahmad Naeem'");
+
+			sql = "SELECT * FROM user";
+			rs = stmt.executeQuery(sql);
+
+			// STEP 5: Extract data from result set
+			while (rs.next()) {
+				// Retrieve by column name
+				int id = rs.getInt("id");
+				String first = rs.getString("name");
+				String email = rs.getString("email");
+
+				// Display values
+				System.out.print("ID: " + id);
+				System.out.print(" -- Name: " + first);
+				System.out.println(" -- Email: " + email);
+
+			}
 			// STEP 6: Clean-up environment
 			rs.close();
 			stmt.close();
